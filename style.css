@@ -11,7 +11,7 @@ body{
 /* styling header */
 header{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     /* background-color: #545454; */
     width: 100%;
     padding:17px 0;
@@ -44,10 +44,14 @@ li a{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #downloadcv:hover{
     cursor: pointer;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 a{
@@ -319,13 +323,13 @@ a{
     object-position: center;
     height: 100%;
     width: 100%;
-    transition: all 1s;
+    transition: all 0.8s ease;
 }
 .projImg:hover{
     cursor: pointer;
 }
 .imgdiv:hover .projImg{
-    scale: 103%;
+    transform: scale(1.05);
     box-shadow: 0 0 5px #FD6F00, 0 0 10px #FD6F00, 0 0 15px #FD6F00;
 
 }
