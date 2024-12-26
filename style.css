@@ -22,6 +22,9 @@ header{
     box-shadow: 0px 0px 5px rgb(191, 184, 184);
     background-color: white;
 }
+li a{
+    color: black;
+}
 #header{
     list-style-type: none;
     width: 50%;
@@ -313,9 +316,15 @@ a{
     object-position: center;
     height: 100%;
     width: 100%;
+    transition: all 1s;
 }
 .projImg:hover{
     cursor: pointer;
+}
+.imgdiv:hover .projImg{
+    scale: 103%;
+    box-shadow: 0 0 5px #FD6F00, 0 0 10px #FD6F00, 0 0 15px #FD6F00;
+
 }
 
 .contact-form {
