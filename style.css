@@ -65,13 +65,13 @@ li a{
     border: none;
     color: white;
     border-radius: 5px;
-    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 
 #downloadcv:hover{
     cursor: pointer;
@@ -423,10 +423,7 @@ a{
     align-items: center;
 }
 
-@media (max-width: 1270px){
-    
-    
-}
+
 @media (max-width: 1000px){
     #heroSection{
         padding:0px;
@@ -508,45 +505,42 @@ a{
     
 } 
 
-@media (max-width: 630px){
-    .project{
-        width: 90%;
-    }
-
-}
-
-
-@media (max-width: 768px) {
-    #menu-toggle {
-        display: block;
-    }
-
+@media screen and (max-width: 768px) {
+    /* Hide the menu by default on mobile */
     #header {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 60px; /* Adjust based on header height */
-        left: 0;
         width: 100%;
-        background-color: white;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 10px 0;
-        z-index: 2;
     }
 
-    #header li {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    #header a {
-        color: black;
-        text-decoration: none;
-    }
-
-    /* Show menu when active */
-    #menu-toggle.active + #header {
+    /* Make the menu visible when the checkbox is checked */
+    .menu-toggle-checkbox:checked ~ #header {
         display: flex;
+    }
+
+    /* Style for the hamburger icon */
+    #menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Hide the checkbox and label by default */
+    .menu-toggle-checkbox {
+        display: none;
+    }
+
+    /* Adjust the layout and appearance of the navigation items */
+    #header li {
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Adjust the styling of the 'Download CV' button for mobile */
+    #downloadcv {
+        margin-top: 20px;
+        display: block;
+        width: 100%;
     }
 }
 
@@ -558,6 +552,9 @@ a{
     }
     #downloadcv{
         display: none;
+    }
+    .project{
+        width: 90%;
     }
     
 }
